@@ -15,6 +15,6 @@ provider "digitalocean" {
 }
 
 data "digitalocean_ssh_key" "id_rsa" {
-  name = "id_rsa.pub"
+  name = "id_rsa"
 } 
 
