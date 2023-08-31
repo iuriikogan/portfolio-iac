@@ -4,7 +4,7 @@ resource "digitalocean_kubernetes_cluster" "iuriikogan-portfolio" {
   version = "1.25.12-do.0"
   
   node_pool {
-    name = "autoscale_node_pool"
+    name = "iuriikogan-portfolio-pool"
     size = "s-2vcpu-2gb"
     auto_scale = true
     min_nodes = 1
