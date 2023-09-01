@@ -51,7 +51,7 @@ resource "kubernetes_service" "portfolio" {
   }
   spec {
     selector = {
-      portfolio = kubernetes_deployment.portfolio.spec.0.template.0.metadata.0.labels.app
+      app = kubernetes_deployment.portfolio.spec.0.template.0.metadata.0.labels.app
     }
     type = "NodePort"
     port {
