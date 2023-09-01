@@ -1,13 +1,15 @@
-resource "digitalocean_kubernetes_cluster" "iuriikogan-portfolio" {
-  name = "iuriikogan-portfolio"
-  region = "fra1"
-  version = "1.25.12-do.0"
-  
+resource "digitalocean_kubernetes_cluster" "iuriikogan-portfolio-cluster" {
+  name     = "iuriikogan-portfolio-cluster"
+  region   = var.region
+  version  = "1.25.12-do.0"
+  vpc_uuid = digitalocean_vpc.portfolio.id
+
   node_pool {
-    name = "autoscale_node_pool"
-    size = "s-2vcpu-2gb"
+    name       = "iuriikogan-portfolio-pool"
+    size       = "s-2vcpu-2gb"
     auto_scale = true
-    min_nodes = 1
-    max_nodes = 3
+    min_nodes  = 1
+    max_nodes  = 3
   }
+ 
 }

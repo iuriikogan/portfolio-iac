@@ -1,0 +1,16 @@
+---
+# nginx_ingress_values.yaml
+
+controller:
+  hostPort:
+    enabled: true
+  terminationGracePeriodSeconds: 0
+  service:
+    type: "LoadBalancer"
+    loadBalancer_ip: 188.166.132.211
+  ingressClassName: nginx
+  publishService:
+    enabled: true
+  annotations: 
+    service.beta.kubernetes.io/do-loadbalancer-enable-proxy-protocol: 'true'
+    service.beta.kubernetes.io/do-loadbalancer-hostname: "www.iuriikogan.com"
