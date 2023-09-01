@@ -11,10 +11,4 @@ provider "digitalocean" {
   token = var.do_token
 }
 
-<<<<<<< HEAD
-data "digitalocean_ssh_key" "id_rsa" {
-  name = "id_rsa"
-} 
-=======
->>>>>>> main
 
