@@ -10,9 +10,3 @@ resource "digitalocean_certificate" "cert" {
   name    = "portfolio-cert"
   type    = "lets_encrypt"
   domains = ["www.iuriikogan.com"]
-}
-
-# resource "digitalocean_domain" "portfolio-domain" {
-#   name = "iuriikogan.com"
-#   ip_address = var.portfolio_ingress_ip
-# }
