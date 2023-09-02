@@ -12,5 +12,5 @@ variable "droplet_ids" {
 
 variable "portfolio_ingress_ip" {
   type    = string
-  default = "188.166.132.211"
+  default = "192.168.42.112"
 }

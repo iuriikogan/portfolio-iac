@@ -67,6 +67,9 @@ resource "kubernetes_ingress_v1" "portfolio-ingress" {
   metadata {
     name = "portfolio-ingress"
     namespace = "portfolio"
+    annotations = {
+      "cert-manager.io/cluster-issuer" = module.cert_manager.cluster_issuer_name
+    }
   }
   spec {
     ingress_class_name = "nginx"
@@ -74,7 +77,7 @@ resource "kubernetes_ingress_v1" "portfolio-ingress" {
       host = "www.iuriikogan.com"
       http {
         path {
-          path = "/*"
+          path = "/"
           backend {
             service {
               name = kubernetes_service.portfolio.metadata.0.name

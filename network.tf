@@ -1,14 +1,9 @@
-resource "digitalocean_vpc" "portfolio" {
-  name = "portfolio"
+resource "digitalocean_vpc" "portfolio-vpc" {
+  name = "portfolio-vpc"
 
   region = var.region
 
-  ip_range = "192.168.44.0/24"
-}
-
-resource "digitalocean_domain" "portfolio" {
-   name = "www.iuriikogan.com"
-   ip_address = var.portfolio_ingress_ip
+  ip_range = "192.168.42.0/24"
 }
 
 resource "digitalocean_certificate" "cert" {
@@ -16,3 +11,8 @@ resource "digitalocean_certificate" "cert" {
   type    = "lets_encrypt"
   domains = ["www.iuriikogan.com"]
 }
+
+# resource "digitalocean_domain" "portfolio-domain" {
+#   name = "iuriikogan.com"
+#   ip_address = var.portfolio_ingress_ip
+# }
