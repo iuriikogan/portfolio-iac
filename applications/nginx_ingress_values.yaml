@@ -7,10 +7,12 @@ controller:
   terminationGracePeriodSeconds: 0
   service:
     type: "LoadBalancer"
-  ingressClassName: nginx
+    LoadBalancer_ip: 146.190.226.31
   publishService:
     enabled: true
-  annotations: 
+  annotations:
     service.beta.kubernetes.io/do-loadbalancer-enable-proxy-protocol: 'true'
     service.beta.kubernetes.io/do-loadbalancer-hostname: "www.iuriikogan.com"
     service.beta.kubernetes.io/do-loadbalancer-certificate-id: "eb8416d2-e406-4cd7-a392-d577bdd1a460"
+  spec:
+    ingressClassName: "nginx"
