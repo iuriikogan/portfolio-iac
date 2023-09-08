@@ -9,4 +9,5 @@ resource "digitalocean_vpc" "portfolio-vpc" {
 resource "digitalocean_certificate" "cert" {
   name    = "portfolio-cert"
   type    = "lets_encrypt"
-  domains = ["www.iuriikogan.com"]
+  domains = var.domains
+}
