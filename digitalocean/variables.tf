@@ -15,5 +15,5 @@ variable "portfolio_ingress_ip" {
 }
 
 variable "domains" {
- type = []strings
+ type = list(string)
 }
