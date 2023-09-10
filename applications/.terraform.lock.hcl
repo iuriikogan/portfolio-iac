@@ -2,8 +2,12 @@
 # Manual edits may be lost in future updates.
 
 provider "registry.terraform.io/alekc/kubectl" {
+<<<<<<< HEAD
   version     = "2.0.2"
   constraints = ">= 2.0.2"
+=======
+  version = "2.0.2"
+>>>>>>> dev
   hashes = [
     "h1:U+Gw/peCK/m5S+49NTUPpfAggAU/8brpYGQYe7F8VHc=",
     "zh:158e24310e600f2d0f72dc58e9dce3c3a161bb37473ba56514ecccf1fb60649f",
