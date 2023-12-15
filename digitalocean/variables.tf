@@ -10,9 +10,9 @@ variable "droplet_ids" {
   default = []
 }
 
-variable "portfolio_ingress_ip" {
-  type    = string
-}
+# variable "portfolio_ingress_ip" {
+#   type    = string
+# }
 
 variable "domains" {
  type = list(string)
