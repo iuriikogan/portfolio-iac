@@ -74,7 +74,7 @@ resource "kubernetes_ingress_v1" "portfolio-ingress" {
   spec {
     ingress_class_name = "nginx"
     rule {
-      host = "www.iuriikogan.com"
+      host = "www.iuriikogan.dev"
       http {
         path {
           path = "/"
@@ -90,7 +90,7 @@ resource "kubernetes_ingress_v1" "portfolio-ingress" {
       }
     }
     tls {
-        hosts = ["www.iuriikogan.com"]
+        hosts = ["www.iuriikogan.dev"]
         secret_name = "portfolio-cert"
       }
   }

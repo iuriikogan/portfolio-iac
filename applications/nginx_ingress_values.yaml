@@ -12,7 +12,6 @@ controller:
     enabled: true
   annotations:
     service.beta.kubernetes.io/do-loadbalancer-enable-proxy-protocol: 'true'
-    service.beta.kubernetes.io/do-loadbalancer-hostname: "www.iuriikogan.com"
-    service.beta.kubernetes.io/do-loadbalancer-certificate-id: "eb8416d2-e406-4cd7-a392-d577bdd1a460"
+    service.beta.kubernetes.io/do-loadbalancer-hostname: "www.iuriikogan.dev"
   spec:
     ingressClassName: "nginx"
