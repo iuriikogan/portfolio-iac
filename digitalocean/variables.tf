@@ -5,15 +5,7 @@ variable "region" {
   default = "ams3"
 }
 
-variable "droplet_ids" {
-  type    = list(string)
-  default = []
-}
-
-# variable "portfolio_ingress_ip" {
-#   type    = string
-# }
-
 variable "domains" {
- type = list(string)
+  type = list(string)
+  default = ["www.iuriikogan.dev"]
 }
