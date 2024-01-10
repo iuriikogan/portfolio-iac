@@ -27,3 +27,9 @@ variable "cluster_issuer_private_key_secret_name" {
   description = "The name of the secret that will store the private key for the cluster issuer."
   default     = "letsencrypt-prod"
 }
+
+variable "chart_version" {
+  type = string
+  description = "cert-manager helm chart version"
+  default = "v1.13.3" 
+}
