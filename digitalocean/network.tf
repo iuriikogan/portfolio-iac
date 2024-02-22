@@ -5,6 +5,7 @@ resource "digitalocean_vpc" "portfolio-vpc" {
 
   ip_range = "192.168.42.0/24"
 }
+<<<<<<< HEAD
 
 resource "digitalocean_loadbalancer" "portfolio_lb" {
   name        = "portfolio-loadbalancer-1"
@@ -22,3 +23,5 @@ resource "digitalocean_loadbalancer" "portfolio_lb" {
 output "portfolio_lb_id" {
  value = "digitalocean_loadbalancer.portfolio_lb.loadbalancer_uuid"
 }
+=======
+>>>>>>> 52bb055 (remove aws)
